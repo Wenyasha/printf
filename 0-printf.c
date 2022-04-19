@@ -1,7 +1,8 @@
 #include "main.h"
 
 /**
- * @format - produces according to a format
+ * _printf - produces output according to a format
+ * @format: string containgi characterrs and specifiers
  * Return: number of characters printed
  */
 
@@ -13,7 +14,7 @@ int _printf(const char *format, ...)
 	const char *p;
 	flagStruct flags = {0, 0, 0};
 
-	va_start(args, format);	
+	va_start(args, format);
 	if (!format || (format[0] == '%' && !format[1]))
 		return (-1);
 	if (format[0] == '%' && format[1] == ' ' && !format[2])
