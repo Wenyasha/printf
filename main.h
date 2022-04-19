@@ -2,6 +2,7 @@
 #define _MAIN_
 #include "stdio.h"
 #include "stdlib.h"
+#include "stdarg.h"
 int _printf(const char *format, ...);
 int _putchar(char c);
 
@@ -18,6 +19,7 @@ typedef struct flags
 	int space;
 	int hash;
 } flagStruct;
-int get_flag(char s, flags_t *f);
+int get_flag(char s, flagStruct *f);
+int (*get_print(char s))(va_list, flagStruct *);
 
 #endif /*_MAIN_*/

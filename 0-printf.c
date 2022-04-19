@@ -8,8 +8,8 @@
 
 int _printf(const char *format, ...)
 {
-	unsigned int i = 0;
-	int (*pfunc)(va_list, flagStruct);
+	register int count = 0;
+	int (*pfunc)(va_list, flagStruct *);
 	va_list args;
 	const char *p;
 	flagStruct flags = {0, 0, 0};
@@ -33,7 +33,7 @@ int _printf(const char *format, ...)
 				p++;
 			pfunc = get_print(*p);
 			count += (pfunc)
-				? pfunc(arguments, &flags)
+				? pfunc(args, &flags)
 				: _printf("%%%c", *p);
 		}
 		else
