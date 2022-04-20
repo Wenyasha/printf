@@ -10,7 +10,7 @@ int (*get_print(char s))(va_list, flagStruct *)
 {
 	ph func_arr[] = {
 		{'i', print_int},
-		{'s', print_string},
+		{'s', print_str},
 		{'c', print_char},
 		{'d', print_int},
 		{'u', print_unsigned},
@@ -21,7 +21,7 @@ int (*get_print(char s))(va_list, flagStruct *)
 		{'R', print_rot13},
 		{'r', print_rev},
 		{'S', print_bigS},
-		{'p', print_address},
+		{'p', print_ad},
 		{'%', print_percent}
 	};
 	int flags = 14;

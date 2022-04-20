@@ -8,14 +8,13 @@
  * if a flag is passed to 0-printf
  * Return: number of char printed
 */
-int print_str(va_list l, flags_t *f)
+int print_str(va_list l, flagStruct *f)
 {
-char *s = va_arg(l, char *);
-
-(void)f;
-if (!s)
-s = "(null)";
-return (_puts(s));
+	char *s = va_arg(l, char *);
+	(void)f;
+	if (!s)
+		s = "(null)";
+	return (_puts(s));
 }
 
 /**
@@ -25,9 +24,9 @@ return (_puts(s));
  * if a flag is passed to 0-printf
  * Return: number of char printed
 */
-int print_char(va_list l, flags_t *f)
+int print_char(va_list l, flagStruct *f)
 {
-(void)f;
-_putchar(va_arg(l, int));
-return (1);
+	(void)f;
+	_putchar(va_arg(l, int));
+	return (1);
 }

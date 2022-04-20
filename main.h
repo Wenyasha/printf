@@ -32,6 +32,9 @@ typedef struct printHandler
 	int (*f)(va_list ap, flagStruct *f);
 } ph;
 
+char *convert(unsigned long int num, int base, int lowercase);
+int _putchar(char c);
+int _puts(char *str);
 int get_flag(char s, flagStruct *f);
 int (*get_print(char s))(va_list, flagStruct *);
 int print_hex(va_list l, flagStruct *f);
