@@ -49,8 +49,8 @@ int print_octal(va_list l, flagStruct *f);
 int print_rot13(va_list l, flagStruct *f);
 int print_rev(va_list l, flagStruct *f);
 int print_bigS(va_list l, flagStruct *f);
-int print_address(va_list l, flagStruct *f);
+int print_ad(va_list l, flagStruct *f);
 int print_percent(va_list l, flagStruct *f);
-int print_string(va_list l, flagStruct *f);
+int print_str(va_list l, flagStruct *f);
 int print_char(va_list l, flagStruct *f);
 #endif /*_MAIN_*/
